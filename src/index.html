@@ -165,6 +165,54 @@
       </div>
     </section>
     <!-- /END About Section -->
+     <style>
+  /* ===== Unified “Research-style” tiles ===== */
+  .tiles {
+    display: grid;
+    grid-template-columns: 1fr;     /* phones: single column */
+    gap: 28px;
+    align-items: start;
+  }
+  @media (min-width: 768px) {
+    .tiles { grid-template-columns: repeat(2, 1fr); }  /* tablets & up: 2 cols */
+  }
+  @media (min-width: 1200px) {
+    .tiles.projects-3 { grid-template-columns: repeat(3, 1fr); } /* optional 3-col for projects */
+  }
+
+  .tile {
+    text-align: center;              /* matches Research look */
+    padding: 8px 10px;               /* light breathing room */
+  }
+  .tile h3 {
+    font-size: clamp(18px, 2.2vw, 22px);
+    font-weight: 700;
+    margin: 0 0 8px;
+    color: #0f172a;
+  }
+  .tile p,
+  .tile ul {
+    margin: 0 auto 12px;
+    max-width: 48ch;                 /* keep lines readable */
+    color: #374151;
+    line-height: 1.55;
+  }
+  .tile ul { list-style: none; padding: 0; }
+  .tile ul li { margin: 6px 0; }
+
+  .tile .cta {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 10px 16px;
+    border: 2px solid #28c2ad;       /* teal like your button */
+    color: #0f172a;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  .section-title { text-align: center; margin-bottom: 18px; }
+</style>
+
 <!-- **** Experience Section **** -->
 <section id="experience">
   <div class="container">
@@ -174,30 +222,30 @@
       <!-- Experience 1 -->
       <div class="col-lg-6 col-sm-12 experience-card mb-4">
         <h3 class="experience-title"><b>AI Developer - InCtrl LLC</b></h3>
-        <ul class="experience-info">
-          <li>Analyzed large-scale <b>e-commerce datasets</b> with predictive analytics and <b>PostgreSQL/AWS</b>, improving sales forecast accuracy by 25% and boosting revenue growth by 15%.</li>
-          <li>Developed and deployed an <b>LLM-powered RAG chatbot</b> with <b>Pinecone</b> and <b>OpenAI/Anthropic APIs</b>, cutting customer support response time by 40% and increasing engagement by 30%.</li>
-          <li>Built <b>agent-based workflows</b> with <b>LangChain, FastAPI, Next.js/React, TypeScript</b>, enabling seamless generative AI integration.</li>
-          <li>Collaborated in a <b>fast-paced agile environment</b> to automate workflows, improving operational efficiency by 35%.</li>
-        </ul>
+        <p class="experience-info">
+          Analyzed large-scale <b>e-commerce datasets</b> with PostgreSQL/AWS pipelines, improving forecast accuracy by 25% and revenue by 15%.<br>
+          Built and deployed an <b>LLM-powered RAG chatbot</b> with Pinecone and OpenAI/Anthropic APIs, cutting response time by 40% and boosting engagement by 30%.<br>
+          Designed <b>agent-based workflows</b> with LangChain, FastAPI, Next.js/React, TypeScript, and collaborated in a <b>fast-paced agile</b> environment, improving efficiency by 35%.
+        </p>
+        <a rel="noreferrer" href="#" target="_blank" class="cta-btn cta-btn--hero">Read More</a>
       </div>
 
       <!-- Experience 2 -->
       <div class="col-lg-6 col-sm-12 experience-card mb-4">
         <h3 class="experience-title"><b>Jr. Machine Learning Intern - Opeinapp</b></h3>
-        <ul class="experience-info">
-          <li>Enhanced multilingual video translation using <b>Facebook’s M2M-100</b>, improving accessibility by 18%.</li>
-          <li>Fine-tuned <b>NMT models</b> with PyTorch/HuggingFace, reducing translation errors by 25% and increasing global content accessibility.</li>
-          <li>Optimized ML pipelines with <b>PySpark</b> and parallel processing, reducing inference latency by 30%.</li>
-          <li>Conducted comparative analysis of <b>BERT, GPT, and T5</b> for NLP tasks, improving accuracy and guiding model selection.</li>
-          <li>Prototyped <b>generative AI features</b> with <b>OpenAI APIs</b> and agent-based pipelines, demonstrating adaptability in a startup environment.</li>
-        </ul>
+        <p class="experience-info">
+          Enhanced multilingual video translation using <b>M2M-100</b>, improving accessibility by 18%.<br>
+          Fine-tuned <b>NMT models</b> with PyTorch/HuggingFace, reducing translation errors by 25% and increasing content accessibility.<br>
+          Optimized pipelines with <b>PySpark</b> (-30% latency), conducted comparative analysis of <b>BERT, GPT, T5</b>, and prototyped <b>generative AI features</b> with OpenAI APIs in a startup environment.
+        </p>
+        <a rel="noreferrer" href="#" target="_blank" class="cta-btn cta-btn--hero">Read More</a>
       </div>
 
     </div>
   </div>
 </section>
 <!-- /END Experience Section -->
+
 
 
 
@@ -208,50 +256,42 @@
     <div class="row">
 
       <!-- Project 1 -->
-      <div class="col-lg-4 col-md-6 col-sm-12 project-card mb-5">
+      <div class="col-lg-4 col-sm-12 project-card mb-4">
         <h3 class="project-title"><b>DocMate-AI — AI-Powered Medical Chatbot</b></h3>
-        <ul class="project-info">
-          <li>Built a conversational assistant using <b>RAG</b> with <b>FAISS/Pinecone</b>, <b>LangChain</b>, and <b>OpenAI/Anthropic APIs</b>.</li>
-          <li>Achieved <b>90%+ entity recognition</b> with real-time medical entity extraction.</li>
-          <li>Engineered end-to-end voice flow: Whisper (STT) → LLM reasoning → TTS.</li>
-          <li>Deployed with <b>FastAPI, PostgreSQL, AWS, and Vercel</b>, reducing response latency by 40%.</li>
-        </ul>
+        <p class="project-info">
+          Built a conversational assistant using <b>RAG</b> with FAISS/Pinecone, LangChain, and OpenAI/Anthropic APIs.<br>
+          Achieved <b>90%+ entity recognition</b>, added Whisper → LLM → TTS pipeline, and deployed with FastAPI, PostgreSQL, AWS, Vercel, reducing latency by 40%.
+        </p>
         <a rel="noreferrer" href="https://github.com/nandhakv12/DocMate-AI-Your-virtual-AI-powered-medical-assistant" target="_blank" class="cta-btn cta-btn--hero">View Project</a>
       </div>
 
       <!-- Project 2 -->
-      <div class="col-lg-4 col-md-6 col-sm-12 project-card mb-5">
+      <div class="col-lg-4 col-sm-12 project-card mb-4">
         <h3 class="project-title"><b>Blurred Realities — AI-Generated Image Detection</b></h3>
-        <ul class="project-info">
-          <li>Designed a detector using <b>Vision Transformers (ViTs) + CNNs</b> with contrastive learning.</li>
-          <li>Achieved <b>92%+ accuracy</b> across diverse datasets.</li>
-          <li>Evaluated robustness under <b>JPEG compression, blur, FGSM attacks</b>.</li>
-          <li>Added explainability with <b>Grad-CAM</b> and <b>SHAP</b> visualizations.</li>
-        </ul>
+        <p class="project-info">
+          Developed a detector using <b>ViTs + CNNs</b> with contrastive learning, reaching <b>92%+ accuracy</b>.<br>
+          Evaluated robustness under JPEG, blur, and FGSM attacks; added <b>Grad-CAM/SHAP</b> explainability for interpretability.
+        </p>
         <a rel="noreferrer" href="https://github.com/nandhakv12/Blurred-Realities-AI-Generated-Image-Detection-System-" target="_blank" class="cta-btn cta-btn--hero">View Project</a>
       </div>
 
       <!-- Project 3 -->
-      <div class="col-lg-4 col-md-6 col-sm-12 project-card mb-5">
+      <div class="col-lg-4 col-sm-12 project-card mb-4">
         <h3 class="project-title"><b>Optimized RL for Decision-Making</b></h3>
-        <ul class="project-info">
-          <li>Implemented <b>Q-Learning, Double Q, and Multi-Agent RL</b> in <b>PyTorch + OpenAI Gym</b>.</li>
-          <li>Improved policy convergence by <b>35%</b> and reduced training variance by <b>25%</b>.</li>
-          <li>Integrated <b>PER</b> and <b>Offline RL</b>, boosting sample efficiency by 40%.</li>
-          <li>Produced modular training/evaluation pipelines with reproducible plots.</li>
-        </ul>
+        <p class="project-info">
+          Implemented <b>Q-Learning, Double Q, Multi-Agent RL</b> in PyTorch + OpenAI Gym.<br>
+          Achieved <b>35% faster convergence</b> and <b>25% lower variance</b> using PER and Offline RL, improving sample efficiency by 40%.
+        </p>
         <a rel="noreferrer" href="https://github.com/nandhakv12/Optimized-Reinforcement-Learning-for-decision-making" target="_blank" class="cta-btn cta-btn--hero">View Project</a>
       </div>
 
       <!-- Project 4 -->
-      <div class="col-lg-4 col-md-6 col-sm-12 project-card mb-5">
+      <div class="col-lg-4 col-sm-12 project-card mb-4">
         <h3 class="project-title"><b>E-commerce Big Data Pipeline</b></h3>
-        <ul class="project-info">
-          <li>Processed <b>10M+ logs</b> with <b>Hadoop, Spark, and Kafka</b> for batch + streaming analytics.</li>
-          <li>Achieved sub-second latency and <b>35% faster queries</b>.</li>
-          <li>Designed scalable ingestion & storage workflows with <b>HDFS, PySpark, Spark Streaming, PostgreSQL</b>.</li>
-          <li>Productionized with <b>Docker</b> and CI/CD for robust deployment.</li>
-        </ul>
+        <p class="project-info">
+          Built an end-to-end pipeline processing <b>10M+ logs</b> with Hadoop, Spark, and Kafka for real-time + batch analytics.<br>
+          Deployed with HDFS, PySpark, Spark Streaming, PostgreSQL; achieved sub-second latency and <b>35% faster queries</b>.
+        </p>
         <a rel="noreferrer" href="https://github.com/nandhakv12/End-to-End-Big-Data-Pipeline-using-Hadoop-and-Spark-for-eCommerce-User-Behavior-Analysis" target="_blank" class="cta-btn cta-btn--hero">View Project</a>
       </div>
 
@@ -259,6 +299,7 @@
   </div>
 </section>
 <!-- /END Projects Section -->
+
 
 
     <!-- **** Research Section **** -->
